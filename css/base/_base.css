@@ -1,9 +1,7 @@
 :root {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
   /* Cores */
   --color-sidebar: #e5e6e7;
-
   --primary-color: #fc814a;
   --secundary-color: #f52cb9;
   --white-600: #fff;
@@ -13,8 +11,18 @@
   --gray: #d3d3d3;
   --dark-bg: #202529;
 
+  --height-header: 7.2rem;
+
   /* Bordas e Sombras */
-  --box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.3);
+  --box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .flex {
@@ -29,10 +37,4 @@
 a {
   text-decoration: none;
   cursor: pointer;
-}
-
-.wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 7.2rem;
 }

@@ -96,12 +96,6 @@ body {
   line-height: 1.6;
 }
 
-html,
-body,
-* {
-  box-sizing: border-box;
-}
-
 /* HTML5 display-role reset */
 article,
 aside,

@@ -1,0 +1,13 @@
+.wrapperAvatar {
+  max-width: 14rem;
+  max-height: 14rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.wrapperAvatar__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

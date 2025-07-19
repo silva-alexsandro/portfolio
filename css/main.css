@@ -1,7 +1,3 @@
 @import url('./base/_reset.css');
 @import url('./base/_base.css');
-
-/*
-Componentes da pagina
-*/
-@import url('./components/_sidebar.css');
+@import url('./pages/_layout.css');

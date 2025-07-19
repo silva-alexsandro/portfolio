@@ -1,76 +1,64 @@
+@import url('./_avatar.css');
+
 .sidebar {
-  min-width: 32rem;
-  height: 100vh;
+  justify-content: space-between;
   transition: transform 0.3s ease;
-  z-index: 1000;
   background-color: var(--color-sidebar);
+  box-shadow: var(--box-shadow-light);
+}
+
+.sidebar__top {
   padding: 2.4rem 0;
   align-items: center;
-  position: relative;
 }
 
-.sidebar__wrapperAvatar {
-  max-width: 14rem;
-  max-height: 14rem;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.sidebar__wrapperAvatar__avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-
-.sidebar__nav {
+.sidebar__top__nav {
   width: 100%;
   margin-top: 3.2rem;
 }
 
-
-.sidebar__nav__menu {
+.sidebar__top__nav__menu {
   padding: .8rem;
   gap: .4rem;
 }
 
-.sidebar__nav__menu__item {
+.sidebar__top__nav__menu__item {
   padding: 1rem;
   border-radius: .6rem;
   cursor: pointer;
 }
 
-.sidebar__nav__menu__item--active,
-.sidebar__nav__menu__item:hover {
+.sidebar__top__nav__menu__item--active,
+.sidebar__top__nav__menu__item:hover {
   background-color: var(--black-300);
   color: var(--white-600);
 }
 
 
-.sidebar__socialMedia {
+.sidebar__bottom {
+  padding-bottom: .8rem;
+}
+
+.sidebar__bottom__socialMedia {
   gap: 2.8rem;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  padding-bottom: .8rem;
 }
 
-.sidebar__socialMedia__item a .icon {
+.sidebar__bottom__socialMedia__item a .icon {
   font-size: 2rem;
   color: var(--black-600);
 }
 
 /*tootip*/
-.sidebar__socialMedia__item a {
+.sidebar__bottom__socialMedia__item a {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
 
-.sidebar__socialMedia__item a .tootip:first-child {
+.sidebar__bottom__socialMedia__item a .tootip:first-child {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -88,6 +76,25 @@
   z-index: 10;
 }
 
-.sidebar__socialMedia__item a:hover span:first-child {
+.sidebar__bottom__socialMedia__item a:hover span:first-child {
   opacity: 1;
+}
+
+
+@media(max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    visibility: hidden;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
 }

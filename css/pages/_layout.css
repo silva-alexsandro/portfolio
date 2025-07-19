@@ -1,0 +1,16 @@
+@import url('../components/_header.css');
+@import url('../components/_sidebar.css');
+@import url('../components/_main.css');
+
+.layout {
+  display: grid;
+  grid-template-columns: 32rem 1fr;
+  min-height: 100vh;
+}
+
+@media(max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+}
