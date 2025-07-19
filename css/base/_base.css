@@ -1,0 +1,38 @@
+:root {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  /* Cores */
+  --color-sidebar: #e5e6e7;
+
+  --primary-color: #fc814a;
+  --secundary-color: #f52cb9;
+  --white-600: #fff;
+  --black-600: #000;
+  --black-300: #1b1b1e;
+  --ice: #e8e8e8;
+  --gray: #d3d3d3;
+  --dark-bg: #202529;
+
+  /* Bordas e Sombras */
+  --box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flex {
+  display: flex;
+  flex-shrink: 1;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 7.2rem;
+}

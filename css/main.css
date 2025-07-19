@@ -1,6 +1,7 @@
-/*codigo css*/
+@import url('./base/_reset.css');
+@import url('./base/_base.css');
 
-html,
-body {
-  font-family: 'Roboto';
-}
+/*
+Componentes da pagina
+*/
+@import url('./components/_sidebar.css');
