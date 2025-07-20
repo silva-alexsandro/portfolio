@@ -1,6 +1,6 @@
-@import url('../components/_header.css');
-@import url('../components/_sidebar.css');
-@import url('../components/_main.css');
+@import url('../components/header.css');
+@import url('../components/sidebar.css');
+@import url('../components/main.css');
 
 .layout {
   display: grid;
