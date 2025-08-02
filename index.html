@@ -22,52 +22,58 @@
 </head>
 
 <body>
-  <header id="header" class="flex">
-    <h2 class="logo">
-      AS
-    </h2>
-    <nav class="navigation" class="flex">
-      <ul class="navigation__list flex">
-        <li class="navigation__list__item">
-          <a href="#projects">Projetos</a>
-        </li>
-        <li class="navigation__list__item">
-          <a href="#about">Sobre</a>
-        </li>
-        <li class="navigation__list__item">
-          <a href="#contact">Contato</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="hamburger">&#9776;</div>
+  <header id="header">
+    <div class="container flex">
+      <h2 class="logo">
+        AS
+      </h2>
+      <nav class="navigation" class="flex">
+        <ul class="navigation__list flex">
+          <li class="navigation__list__item">
+            <a href="#projects">Projetos</a>
+          </li>
+          <!-- <li class="navigation__list__item">
+            <a href="#about">Sobre</a>
+          </li>
+          <li class="navigation__list__item">
+            <a href="#contact">Contato</a>
+          </li> -->
+        </ul>
+      </nav>
+      <div class="hamburger">&#9776;</div>
+    </div>
   </header>
 
   <main id="main">
-    <section id="hero" class="flex">
-      <div class="avatar-container">
-        <img class="avatar" alt="Foto do desenvolvedor Alexsandro Silva">
-      </div>
-      <h1 class="name"></h1>
-      <p class="bio"></p>
+    <section id="hero">
+      <div class="container">
+        <div class="avatar-container">
+          <img class="avatar" alt="Foto do desenvolvedor Alexsandro Silva">
+        </div>
+        <h1 class="name"></h1>
+        <p class="bio"></p>
 
-      <nav class="links_nav">
-        <a id="goGithub" class="flex btn"><i class="ph ph-github-logo"></i>ver projetos</a>
+        <nav class="links_nav">
+          <a id="goGithub" class="flex btn"><i class="ph ph-github-logo"></i>ver projetos</a>
 
-        <a href="https://docs.google.com/document/d/1gQq9l5naFYWDDHr7OQzdo7rt-cI-69-tL_iWsYBBGTQ/edit?usp=sharing"
-          class="flex btn btn-alt"><i class="ph ph-read-cv-logo"></i>CV</a>
-      </nav>
+          <a href="https://docs.google.com/document/d/1gQq9l5naFYWDDHr7OQzdo7rt-cI-69-tL_iWsYBBGTQ/edit?usp=sharing"
+            class="flex btn btn-alt"><i class="ph ph-read-cv-logo"></i>CV</a>
+        </nav>
 
-      <div class="continue">
-        <a href="#projects">
-          <i class=" icon ph ph-arrow-down"></i>
-        </a>
+        <div class="continue">
+          <a href="#projects">
+            <i class=" icon ph ph-arrow-down"></i>
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2 class="section__title">meus projetos</h2>
-      <ul id="repos" class="card_container">
-      </ul>
+      <div class="container">
+        <h2 class="section__title">meus projetos</h2>
+        <ul id="repos" class="card_container">
+        </ul>
+      </div>
     </section>
 
     <!-- <section id="about" class="section">

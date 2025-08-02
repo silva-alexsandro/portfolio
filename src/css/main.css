@@ -46,3 +46,14 @@ a {
 .flex {
   display: flex;
 }
+#header .flex{
+  align-items: center;
+  justify-content: space-between;
+
+}
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}

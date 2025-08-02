@@ -2,14 +2,16 @@
 @import url('../components/button.css');
 
 #hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100vh;
   background: hsla(217, 91%, 60%, 1);
   background: linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
   background: -moz-linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
   background: -webkit-linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
+}
+#hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #hero .name {
   margin: 2rem 0;
