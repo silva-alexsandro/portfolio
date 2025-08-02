@@ -68,7 +68,8 @@ p.subtitle{
 }
 
 @media (min-width: 768px) {
-  #about .card {
+  #about .card,
+  #contact .card {
     max-width: 100%;
   }
 
