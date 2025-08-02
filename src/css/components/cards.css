@@ -7,7 +7,7 @@
   flex-wrap: nowrap;
   gap: 2.8rem;
 }
-.card_container .card {
+.card {
   flex-shrink: 1;
   display: flex;
   flex-direction: column;
@@ -20,20 +20,20 @@
   border-radius: var(--radius-space);
   padding: 3.2rem;
 }
-.card_container .card_small {
+.card_small {
   padding: 2.4rem;
 }
-.card_container .card .card_title {
+.card .card_title {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1.6rem;
 }
-.card_container .card .card_description {
+.card .card_description {
   font-size: 1.2rem;
   font-weight: 300;
   opacity: .7;
 }
-.card_container .card .card_bottom {
+.card .card_bottom {
   width: 100%;
   margin-top: 2rem;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.card_container .card .card_bottom small {
+.card .card_bottom small {
   display: block;
   text-align: center;
 }

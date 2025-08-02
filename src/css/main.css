@@ -1,5 +1,6 @@
 @import url('./templates/header.css');
 @import url('./templates/hero.css');
+@import url('./templates/about.css');
 @import url('./templates/sections.css');
 @import url('./templates/footer.css');
 
@@ -16,7 +17,6 @@
   --radius-space: 1.2rem;
   --shadow-primary: 0 10px 40px -10px hsl(217, 91%, 60%, .3);
   --shadow-glow: 0 0px 50px hsl(217, 91%, 60%, .2);
-  --gradient-primary: linear-gradient(135deg hsl(217, 91%, 60%), hsl(217, 91%, 70%));
 }
 body,
 html,

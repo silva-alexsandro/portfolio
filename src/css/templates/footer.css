@@ -1,9 +1,11 @@
-footer {
-  font-weight: 100;
+
+footer .container{
   font-size: 1.2rem;
-  align-items: center;
   padding: 2.4rem;
+  font-weight: 100;
+  align-items: center;
   justify-content: space-between;
+
 }
 footer img {
   width: 5rem;

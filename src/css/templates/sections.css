@@ -9,12 +9,14 @@ section:nth-of-type(even) {
   background: var(--bg-escuro-alt);
 }
 
-.section__title {
+.title {
   font-size: 3.2rem;
   text-transform: capitalize;
   margin-bottom: 64px;
 }
 
-.section__subtitle {
-  margin-bottom: 24px;
+.subtitle {
+  margin-bottom: 20px;
+   font-size: 1.6rem;
+  font-weight: 600;
 }

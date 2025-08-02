@@ -1,0 +1,82 @@
+.about__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+#about article {
+  margin-bottom: 24px;
+}
+p.subtitle{
+  margin-top: 5rem;
+}
+.company-banner {
+  box-shadow: 0 10px 40px -10px hsla(217, 91%, 60%, 0.5);
+  background-color: var(--bg-escuro-alt);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  height: 20rem;
+  width: 100%;
+}
+
+.marquee-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+/* Item da empresa */
+.company-item {
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* Card da empresa */
+.company-card {
+  border-radius: 25px;
+  border: 1px solid var(--primary);
+  background: hsla(260, 80%, 65%, 0.8);
+  padding: 1rem;
+  width: 25rem;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Keyframes das animações */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) {
+  #about .card {
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .about__text {
+    font-size: 1.6rem;
+  }
+}
