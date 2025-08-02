@@ -1,0 +1,29 @@
+.hamburger {
+  display: none;
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+.navigation .navigation__list {
+  align-items: center;
+  gap: 1.2rem;
+}
+.navigation .navigation__list__item {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .navigation.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}

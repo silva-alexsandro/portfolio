@@ -1,0 +1,22 @@
+@import url('../components/navigation.css');
+
+#header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+}
+#header.scrolled {
+  background-color: #111;
+}
+#header .logo{
+  transform: rotate(3deg);
+}

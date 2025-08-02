@@ -1,0 +1,64 @@
+@import url('../components/avatar.css');
+@import url('../components/button.css');
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: hsla(217, 91%, 60%, 1);
+  background: linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
+  background: -moz-linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
+  background: -webkit-linear-gradient(135deg, rgb(72, 114, 181) 0%, rgb(15, 29, 51) 70%);
+}
+#hero .name {
+  margin: 2rem 0;
+  font-size: 2.4rem;
+}
+#hero .bio {
+  margin-bottom: 3.2rem;
+  font-weight: 30 0;
+  padding: .4rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+.continue {
+  margin-top: 1.8rem;
+  display: inline-block;
+  animation: flutuar 2s ease-in-out infinite;
+}
+.continue .icon {
+  font-size: 2rem;
+}
+.links_nav {
+  max-width: 768px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1024px) {
+  .links_nav {
+    flex-wrap: nowrap;
+    padding: 2.8rem;
+    gap: 1.6rem;
+  }
+}

@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  border: none;
+  padding: 1.4rem;
+  display: inline-flex;
+  text-decoration: dotted;
+  text-transform: capitalize;
+  gap: .8rem;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-space);
+  margin-top: 1.4rem;
+  background: var(--primary);
+  color: black;
+  font-weight: 500;
+  width: 50%;
+  transition: all .3s ease-in;
+}
+.btn:hover {
+  background: var(--secondary);
+  border: 1px solid var(--primary-glow);
+  color: var(--primary);
+}
+.btn-alt:hover {
+  background: var(--primary);
+  color: black;
+}
+.btn-alt {
+  background: var(--secondary);
+  border: 1px solid var(--primary-glow);
+  color: var(--primary);
+}

@@ -1,0 +1,20 @@
+@import url('../components/cards.css');
+
+section:not(:first-child) {
+  padding: 8rem 2.4rem;
+  text-align: center;
+}
+
+section:nth-of-type(even) {
+  background: var(--bg-escuro-alt);
+}
+
+.section__title {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  margin-bottom: 64px;
+}
+
+.section__subtitle {
+  margin-bottom: 24px;
+}
