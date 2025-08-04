@@ -1,18 +1,18 @@
-.elipse {
+/* .elipse {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
   display: inline-block;
   vertical-align: top;
-}
+} */
 .tooltip-container {
   position: relative;
   display: inline-block;
-  max-width: 200px;
+  /* max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
   vertical-align: top;
   cursor: default;
 }

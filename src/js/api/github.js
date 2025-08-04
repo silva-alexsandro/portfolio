@@ -15,7 +15,7 @@ export function githubAPI() {
         $("#repos").append(`
           <li class="card card_small">
           <h2 class="card_title">${repo.name}</h2>
-          <p class="card_description tooltip-container elipse" data-tooltip="${repo.description || "Trabalhando na descrição"}">
+          <p class="card_description" data-tooltip="${repo.description || "Trabalhando na descrição"}">
           ${repo.description || "Trabalhando na descrição"}
           </p>
           <div class="card_bottom">
