@@ -45,6 +45,41 @@
  background-color: #fff;
 }
 
+/* Scroll horizontal em telas pequenas */
+@media (max-width: 768px) {
+  #repos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.6rem;
+    padding-bottom: 1rem;
+  }
+
+  #repos li.postit-card {
+    flex: 0 0 80%;
+    max-width: 320px;
+    scroll-snap-align: start;
+  }
+
+  /* remove alinhamento de grid que não é mais usado */
+  #repos li.postit-card:nth-child(odd),
+  #repos li.postit-card:nth-child(even) {
+    justify-self: unset;
+  }
+
+  /* estética opcional: rolagem suave */
+  #repos::-webkit-scrollbar {
+    height: 8px;
+  }
+  #repos::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  #repos::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+}
+
 /**/
 .projects h2 {
  margin-bottom: 2rem;
