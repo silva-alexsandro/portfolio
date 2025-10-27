@@ -42,7 +42,9 @@
  text-decoration: underline;
  text-underline-offset: 4px;
 }
-
+.postit-card span{
+    margin-left: .4rem;
+}
 .tech-icons {
  font-size: 3.6rem;
  justify-content: center;
