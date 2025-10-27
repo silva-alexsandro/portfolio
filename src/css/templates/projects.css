@@ -1,17 +1,17 @@
-@import url('../components/tooltip.css');
 #projects {
  border: 1px solid red;
 }
 
 section#projects.profile-section {
-  border: 1px solid rgb(0, 255, 0);
- 
+ border: 1px solid rgb(0, 255, 0);
+ display: inline-flex;
+ align-items: center;
 }
 
 section#projects .postit-card {
  width: 180px;
  height: 180px;
- 
+
  display: flex;
  align-items: center;
  justify-content: space-around;
@@ -21,7 +21,7 @@ section#projects .postit-card {
  background: none;
  transform: rotate(0deg);
 }
-section#projects  .postit-card:nth-child(1) {
+section#projects .postit-card:nth-child(1) {
  background-color: #ff49bd;
 }
 section#projects .postit-card__title {
