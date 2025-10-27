@@ -1,0 +1,45 @@
+@import url('../components/tooltip.css');
+#projects {
+ border: 1px solid red;
+}
+
+section#projects.profile-section {
+  border: 1px solid rgb(0, 255, 0);
+ 
+}
+
+section#projects .postit-card {
+ width: 180px;
+ height: 180px;
+ 
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+
+ flex-direction: column;
+ /* gap: 1rem; */
+ background: none;
+ transform: rotate(0deg);
+}
+section#projects  .postit-card:nth-child(1) {
+ background-color: #ff49bd;
+}
+section#projects .postit-card__title {
+ /* font-size: 1.8rem; */
+ font-weight: 600;
+ /* margin-bottom: 1.6rem; */
+}
+
+section#projects .postit-card__description {
+ /* text-align: start; */
+ /* font-size: 1.2rem; */
+ /* font-weight: 300; */
+ /* opacity: 0.7; */
+}
+
+section#projects footer#postit-card__bottom {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}

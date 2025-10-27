@@ -10,6 +10,8 @@
    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
    rel="stylesheet"
   />
+<!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <!-- icons  -->
   <link
@@ -56,51 +58,15 @@
   </header>
   <main id="frame" class="wrapper">
    <div id="content">
-    <section class="info">
-     <i class="ph ph-clock"></i>
-     <p id="js-clock" class="clock">00:00:00</p>
-    </section>
-    <section class="profile-section grid">
-     <article class="intro">
-      <h1 class="intro__title">Olá, eu sou Alexsandro da Silva</h1>
-      <span class="intro__subtitle">
-       Analista e desenvolvedor de sistemas, Rio de Janeiro, Brasil.
-      </span>
-      <p class="intro__description">
-       
-      Sou técnico em informática, formado desde 2012, com ampla experiência na área de tecnologia.
-Ao longo desses anos, desenvolvi diversas habilidades e, em especial, um olhar atento para os detalhes.
-Gosto de criar soluções práticas e eficientes.
-<br>Estou em constante busca por aperfeiçoamento e novos desafios que me permitam aprimorar minhas habilidades.
-<br>Sou dedicado, analítico e motivado por desafios.
-      </p>
+    <section id="projects" class="profile-section">
       
-      <nav class="intro__actions">
-       <a href="./projects.html" class="btn">Ver Projetos</a>
-       <a href="./about.html" class="btn btn--primary">Saber mais</a>
-      </nav>
-     </article>
+      <h1 class="intro__title">PROJETOS</h1>
+        <ul id="repos" class="postits">        </ul>
 
-     <article class="postits">
-      <div class="postit-card">
-       <h3 class="postit-card__title">
-        Responsável, Comprometido, Inteligente.
-       </h3>
-      </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Desenvolvedor Frontend</h3>
-      </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Analista de Dados</h3>
-      </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Futuro Mestre em Computação</h3>
-      </div>
-     </article>
     </section>
    </div>
   </main>
   <script defer type="module" src="./src/js/main.js"></script>
-  <script defer type="module" src="./src/js/clock.js"></script>
+  <script type="module" src="./src/js/repositories.js"></script>
  </body>
 </html>

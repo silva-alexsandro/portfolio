@@ -1,94 +1,13 @@
-@import url('./templates/header.css');
-@import url('./templates/hero.css');
-@import url('./templates/about.css');
-@import url('./templates/sections.css');
-@import url('./templates/footer.css');
+/* main.scss */
+@import './base/reset.css';
 
-:root {
-  font-size: 65.5%;
-  --bg-escuro: hsl(220, 20%, 5%);
-  --bg-escuro-alt: hsl(220, 15%, 8%);
-  --text-color: hsl(210, 40%, 98%);
-  --primary: hsl(217, 91%, 60%);
-  --primary-glow: hsl(217, 91%, 70%);
-  --secondary: hsl(220, 15%, 15%);
-  --secondary-glow: hsl(260, 80%, 65%);
-  --padding: 3.2rem;
-  --radius-space: 1.2rem;
-  --shadow-primary: 0 10px 40px -10px hsl(217, 91%, 60%, .3);
-  --shadow-glow: 0 0px 50px hsl(217, 91%, 60%, .2);
-}
+@import 'components/buttons.css';
+@import 'components/infinitecarousel.css';
 
-body,
-html,
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  font-size: 1.6rem;
-}
+@import './layout/header.css';
+@import './layout/container.css';
+@import './layout/mod.css';
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg-escuro);
-  color: var(--text-color);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.flex {
-  display: flex;
-}
-
-#header .flex {
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-.container {
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100%;
-}
-
-.wrapper_contact {
-  margin-top: 3.6rem;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.wrapper_contact li {
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-.wrapper_contact li i {
-  font-size: 3.2rem;
-}
-
-.wrapper_contact li div p {
-  
-  text-align: start;
-  font-size: 600;
-}
-
-.wrapper_contact li div span {
-  font-size: 1.2rem;
-  opacity: .8;
-}
+@import './templates/home.css';
+@import './templates/about.css';
+@import './templates/projects.css';

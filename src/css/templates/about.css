@@ -1,83 +1,50 @@
-.about__text {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  text-align: justify;
+#about .postit-card {
+ width: 100px;
+ height: 100px;
 }
 
-#about article {
-  margin-bottom: 24px;
-}
-p.subtitle{
-  margin-top: 5rem;
-}
-.company-banner {
-  box-shadow: 0 10px 40px -10px hsla(217, 91%, 60%, 0.5);
-  background-color: var(--bg-escuro-alt);
-  padding: 1.5rem 0;
-  overflow: hidden;
-  height: 20rem;
-  width: 100%;
+#about .postit-card:nth-child(8) {
+ background-color: #ff49bd;
+ transform: rotate(0deg);
 }
 
-.marquee-container {
-  position: relative;
-  display: flex;
-  overflow: hidden;
+#about .postit-card:nth-child(5),
+#about .postit-card:nth-child(0) {
+ background-color: #e5ff88;
+ transform: rotate(8deg);
 }
 
-.marquee-content {
-  display: flex;
-  white-space: nowrap;
-  animation: marquee 25s linear infinite;
+#about .postit-card:nth-child(9),
+#about .postit-card:nth-child(12) {
+ background-color: #8ae8ff;
+ transform: rotate(5deg);
 }
 
-/* Item da empresa */
-.company-item {
-  margin: 0 2rem;
-  flex-shrink: 0;
+#about .postit-card:nth-child(7),
+#about .postit-card:nth-child(10) {
+ background-color: #ff9770;
+ transform: rotate(6deg);
+}
+#about .postit-card:nth-child(6),
+#about .postit-card:nth-child(11) {
+ background-color: #98ff70;
+ transform: rotate(-3deg);
 }
 
-/* Card da empresa */
-.company-card {
-  border-radius: 25px;
-  border: 1px solid var(--primary);
-  background: hsla(260, 80%, 65%, 0.8);
-  padding: 1rem;
-  width: 25rem;
-  height: 15rem;
-  overflow: hidden;
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.social-media a:hover{
+text-decoration: underline;
+text-underline-offset: 4px;
 }
 
-.company-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: all 0.3s ease;
+.tech-icons {
+  font-size: 3.6rem;
+  justify-content: center;
 }
-
-/* Keyframes das animações */
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@media (min-width: 768px) {
-  #about .card,
-  #contact .card {
-    max-width: 100%;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-
-  .about__text {
-    font-size: 1.6rem;
-  }
-}
+.tech-icons:hover { transform: scale(1.2); transition: .3s; }

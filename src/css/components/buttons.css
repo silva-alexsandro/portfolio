@@ -1,0 +1,12 @@
+.btn {
+ padding: 1.4rem;
+ border: 1px solid;
+ border-radius: 0.4rem;
+}
+.btn:hover {
+ filter: brightness(110%);
+}
+.btn--primary {
+ background: var(--color-primary);
+ color: var(--color-white);
+}

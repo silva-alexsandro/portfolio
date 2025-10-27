@@ -1,0 +1,29 @@
+#frame {
+ overflow: scroll;
+ position: relative;
+}
+
+#content {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ transition: transform 0.4s ease-in-out;
+ transform: translateY(100%);
+}
+
+/* quando a página já carregou, traz para a posição normal */
+body[data-loading='false'] #content {
+ transform: translateY(0);
+}
+
+/* quando sair para a próxima página, sai para a esquerda */
+body[data-exit='true'] #content {
+ transform: translateY(-100%);
+}
+@media (min-width: 992px) {
+ #frame {
+  overflow: hidden;
+ }
+}
