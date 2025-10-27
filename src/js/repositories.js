@@ -4,12 +4,12 @@ export function githubAPI() {
   repos.forEach(function (repo) {
    if (repo.name !== 'silva-alexsandro' && repo.name !== 'portfolio') {
     $('#repos').append(`
-          <li class="postit-card">
+          <li class="postit-card color-base-postit">
           <h2 class="postit-card__title">${repo.name}</h2>
           <p class="postit-card__description" data-tooltip="${
-           repo.description || 'Trabalhando na descrição'
+           repo.description || ''
           }">
-          ${repo.description || 'Trabalhando na descrição'}
+          ${repo.description || ''}
           </p>
 
           <footer id="postit-card__bottom">
