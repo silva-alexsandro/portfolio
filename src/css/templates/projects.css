@@ -44,3 +44,49 @@
 #repos li.color-base-postit {
  background-color: #fff;
 }
+
+/**/
+.projects h2 {
+ margin-bottom: 2rem;
+}
+
+.projects-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 3rem;
+ justify-items: center;
+}
+
+.project-card {
+ position: relative;
+ overflow: hidden;
+ border-radius: 8px;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+ transform: scale(1.03);
+}
+
+.project-card img {
+ width: 100%;
+ display: block;
+ border-radius: 8px;
+}
+
+.overlay {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ padding: 1rem;
+ background: rgba(0, 0, 0, 0.6);
+ color: #fff;
+ text-align: left;
+ opacity: 0;
+ transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+ opacity: 1;
+}

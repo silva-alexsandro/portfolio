@@ -23,10 +23,16 @@ body {
  font-style: normal;
  background: var(--color-bg-primary);
 }
-h1,h2,h3,h4,h5,h6,h7{
-    display: block;
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+ display: block;
+ margin: 0;
+ font-weight: 400;
 }
 ul {
  list-style: none;

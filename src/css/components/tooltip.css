@@ -1,35 +1,35 @@
 .tooltip-container {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  cursor: default;
+ position: relative;
+ display: inline-block;
+ vertical-align: top;
+ cursor: default;
 }
 .tooltip-container::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  left: 50%;
-  bottom: 120%;
-  /* fica acima do texto */
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  border-radius: 4px;
-  white-space: normal;
-  width: max-content;
-  max-width: 300px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  z-index: 10;
+ content: attr(data-tooltip);
+ position: absolute;
+ left: 50%;
+ bottom: 120%;
+ /* fica acima do texto */
+ transform: translateX(-50%);
+ background: rgba(0, 0, 0, 0.85);
+ color: #fff;
+ padding: 6px 10px;
+ font-size: 0.75rem;
+ border-radius: 4px;
+ white-space: normal;
+ width: max-content;
+ max-width: 300px;
+ opacity: 0;
+ pointer-events: none;
+ transition: opacity 0.2s ease;
+ z-index: 10;
 }
 .tooltip-container:hover::after {
-  opacity: 1;
+ opacity: 1;
 }
 @media (min-width: 592px) {
- .tooltip-container,.elipse{
+ .tooltip-container,
+ .elipse {
   max-width: inherit;
-
  }
 }

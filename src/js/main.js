@@ -1,7 +1,6 @@
-import { githubAPI } from "./repositories.js";
+import { githubAPI } from './repositories.js';
 const menuLinks = document.querySelectorAll('.navbar__link');
 const currentPath = window.location.pathname.replace(/\/$/, ''); // remove barra final se existir
-
 
 menuLinks.forEach((link) => {
  // Remove qualquer ativo anterior
@@ -51,7 +50,6 @@ document.querySelectorAll('a').forEach((link) => {
  }
 });
 
-
 $(document).ready(function () {
-  githubAPI();
+ githubAPI();
 });
