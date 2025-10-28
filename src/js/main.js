@@ -1,4 +1,4 @@
-import { githubAPI } from './repositories.js';
+
 const menuLinks = document.querySelectorAll('.navbar__link');
 const currentPath = window.location.pathname.replace(/\/$/, ''); // remove barra final se existir
 
@@ -20,8 +20,6 @@ menuLinks.forEach((link) => {
   link.classList.add('navbar__link--active');
  });
 });
-
-//
 
 document.body.setAttribute('data-loading', 'true');
 
@@ -48,8 +46,4 @@ document.querySelectorAll('a').forEach((link) => {
    }, 400);
   });
  }
-});
-
-$(document).ready(function () {
- githubAPI();
 });

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- font google -->
@@ -10,22 +10,6 @@
    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
    rel="stylesheet"
   />
-  <link
-   rel="stylesheet"
-   href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-  />
-
-  <!-- icons  -->
-  <link
-   rel="stylesheet"
-   type="text/css"
-   href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-  />
-  <link
-   rel="stylesheet"
-   type="text/css"
-   href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-  />
   <link rel="stylesheet" href="./src/css/main.css" />
   <link
    rel="shortcut icon"
@@ -34,7 +18,7 @@
   />
   <title>Alexsandro Silva</title>
  </head>
- <body id="about">
+ <body id="resume-page">
   <header>
    <nav class="navbar">
     <div class="navbar__logo">
@@ -52,6 +36,9 @@
      <li class="navbar__item">
       <a href="./about.html" class="navbar__link">Sobre</a>
      </li>
+      <li class="navbar__item">
+      <a href="./resume.html" class="navbar__link">Curriculo</a>
+     </li>
      <li class="navbar__item">
       <a href="./projects.html" class="navbar__link">Projeto</a>
      </li>
@@ -62,46 +49,34 @@
    <div id="content">
     <section class="section grid">
      <article class="intro">
-      <h1 class="intro__title">Sobre Mim</h1>
+      <h1 class="intro__title">Meu Curriculo</h1>
+
+      <span class="intro__subtitle">
+       Analista e desenvolvedor de sistemas, Rio de Janeiro, Brasil.
+      </span>
+
       <p class="intro__description">
-       Oi meu nome é Alexsandro da Silva, me interesso por cultura e tecnologia.
-       Formado em Análise e Desenvolvimento de Sistemas, tenho um perfil
-       analítico e atenção constante aos detalhes, sempre buscando soluções
-       práticas e eficientes que melhorem processos e resultados.
+     
       </p>
-      <p class="intro__description">
-       Minha trajetória passou por empresas como BRASAS English Course, MJV
-       Technology & Innovation, Oi S.A. e Rede Globo, onde tive a oportunidade
-       de participar de grandes projetos que vão de programas ao vivo para a TV
-       brasileira a landing pages para sistemas internos. Trabalhar com equipes
-       multidisciplinares e ágeis me ensinou a equilibrar criatividade e
-       eficiência.
-      </p>
-      <div class="social-media">
-       <a
-        href="https://www.linkedin.com/in/dasilva-alexsandro/"
-        target="_blank"
-       >
-        Linkedin
-       </a>
-       <span class="dot">•</span>
-       <a href="https://github.com/silva-alexsandro" target="_blank">
-        Github
-       </a>
-      </div>
+      
+     
 
       <nav class="intro__actions">
        <a href="./projects.html" class="btn">Ver Projetos</a>
-       <a href="./about.html" class="btn btn--primary">Download Curriculo</a>
+       <a href="https://docs.google.com/document/d/1lEElQfMJCbzzPyn_OHy7zYvdDhog-KfT/edit?usp=sharing&ouid=105961072305777325254&rtpof=true&sd=true" class="btn btn--primary">Download Curriculo</a>
       </nav>
      </article>
 
-    <article class="postits">
-        curriculo aqui
-    </article>
+     <div class="box">
+
+         <article id="curriculo">
+             carregando...
+            </article>
+        </div>
     </section>
    </div>
   </main>
+  <script defer type="module" src="./src/js/drive.js"></script>
   <script defer type="module" src="./src/js/main.js"></script>
  </body>
 </html>

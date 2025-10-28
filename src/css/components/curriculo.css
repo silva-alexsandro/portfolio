@@ -1,0 +1,46 @@
+#resume-page #curriculo{
+    border: 2px solid #bab8b8;
+    padding: 12px;
+    text-align: justify;
+    background: #fafafa;
+}
+#resume-page .box{
+   
+    width: 700px;
+    max-height: 500px;
+   
+overflow: auto;
+     background: #fff;
+  width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 30px 40px;
+  
+  /* Suaviza o scroll */
+  scroll-behavior: smooth;
+}
+
+/* Estilo da scrollbar para Chrome, Edge e Safari */
+#resume-page .box::-webkit-scrollbar {
+  width: 4px;         /* largura da barra vertical */
+  height: 4px;        /* altura da barra horizontal */
+}
+
+#resume-page .box::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* cor da barra */
+  border-radius: 10px;
+}
+
+#resume-page .box::-webkit-scrollbar-thumb:hover {
+  background: #999;    /* cor ao passar o mouse */
+}
+
+#resume-page .box::-webkit-scrollbar-track {
+  background: transparent; /* sem fundo */
+}
+
+/* Firefox */
+#resume-page .box {
+  scrollbar-width: thin;        /* deixa mais fina */
+  scrollbar-color: #c1c1c1 transparent; /* cor do thumb e trilho */
+}

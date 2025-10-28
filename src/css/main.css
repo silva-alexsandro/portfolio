@@ -1,6 +1,7 @@
 /* main.scss */
 @import './base/reset.css';
 
+@import 'components/curriculo.css';
 @import 'components/buttons.css';
 @import 'components/infinitecarousel.css';
 

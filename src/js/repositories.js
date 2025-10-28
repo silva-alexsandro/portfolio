@@ -1,6 +1,12 @@
+
+
+$(document).ready(function () {
+ githubAPI();
+});
+
+
 export function githubAPI() {
  $.get(`https://api.github.com/users/silva-alexsandro/repos`, function (repos) {
-  console.log(repos);
   repos.forEach(function (repo) {
    if (repo.name !== 'silva-alexsandro' && repo.name !== 'portfolio') {
     $('#repos').append(`
