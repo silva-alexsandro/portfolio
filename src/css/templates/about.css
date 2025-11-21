@@ -1,56 +1,90 @@
-#about .postit-card {
- width: 100px;
- height: 100px;
+#about.about-area {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  flex-direction: column;
+}
+#about.about-area aside.sidebar-about {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 0.8rem;
+  border-top: 1px solid var(--color-primary); /* borda no topo para separar */
+
+  position: static; /* remove sticky */
+  border-right: none; /* remove a borda lateral */
+  border-radius: 0 0 0.8rem 0.8rem;
+  max-height: none; /* permite altura automática */
+  min-width: 100%; /* ocupa toda largura */
+  overflow-y: visible;
+  margin-top: 1rem; /* espaçamento do conteúdo */
+}
+#about aside.sidebar-about button.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+#about.about-area div.contents {
+  width: 100%;
+  flex: 1;
 }
 
-#about .postit-card:nth-child(8) {
- background-color: #ff49bd;
- transform: rotate(0deg);
+#about.about-area div.contents .title-section-active {
+  font-size: var(--font-size-xl);
+  text-align: center;
+}
+#about.about-area div.contents .title-section-active h1 {
+  display: inline-block;
+  font-weight: 600;
+  border-bottom: 2px dashed var(--color-primary);
+}
+#about .contents .section {
+  display: none;
 }
 
-#about .postit-card:nth-child(5),
-#about .postit-card:nth-child(0) {
- background-color: #e5ff88;
- transform: rotate(8deg);
+#about .contents .section.show {
+  display: block;
+}
+#about .contents .section.show.layout-columns {
+  display: grid;
+  margin-top: 1rem;
 }
 
-#about .postit-card:nth-child(9),
-#about .postit-card:nth-child(12) {
- background-color: #8ae8ff;
- transform: rotate(5deg);
+/**/
+section#skills-content .accordion ul.accordion__list li.postit-form {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+section#skills-content .accordion ul.accordion__list li.postit-form:hover {
+  transform: translateY(-5px) rotate(-1deg);
 }
 
-#about .postit-card:nth-child(7),
-#about .postit-card:nth-child(10) {
- background-color: #ff9770;
- transform: rotate(6deg);
-}
-#about .postit-card:nth-child(6),
-#about .postit-card:nth-child(11) {
- background-color: #98ff70;
- transform: rotate(-3deg);
+section#skills-content
+  .accordion
+  ul.accordion__list
+  li.postit-form
+  .tech-icons {
+  font-size: 4rem;
 }
 
-.social-media {
- display: flex;
- align-items: center;
- gap: 0.8rem;
- color: var(--color-primary);
- margin-bottom: 1rem;
-}
-.social-media a:hover {
- text-decoration: underline;
- text-underline-offset: 4px;
-}
-.postit-card span {
- margin-left: 0.8rem;
- display: block;
-}
-.tech-icons {
- font-size: 3.6rem;
- justify-content: center;
-}
-.tech-icons:hover {
- transform: scale(1.2);
- transition: 0.3s;
+@media (min-width: 768px) {
+  #about.about-area {
+    flex-direction: row;
+  }
+  #about.about-area aside.sidebar-about {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 0.8rem;
+    border-right: 1px solid var(--color-primary);
+    border-radius: 0.8rem;
+    min-width: fit-content;
+
+    position: sticky;
+    align-self: flex-start;
+    top: 10rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+  }
 }

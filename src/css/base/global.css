@@ -1,0 +1,99 @@
+:root {
+  font-size: 62.5%;
+  --color-primary: #ff7300;
+  --color-pink: #ff49bd;
+  --color-yellow: #e5ff88;
+  --color-aquablue: #8ae8ff;
+  --color-orange: #ff9770;
+  --focus-color: #f26006;
+  --color-white: #fff;
+  --color-gray: #ccc;
+  --color-dark-bg: #111;
+  --color-dark-text: #eee;
+  --color-bg: #f0f2f5;
+  --color-text: #111;
+  --font-size-xs: clamp(1.2rem, calc(1.2rem + 0.2vw), 1.4rem);
+  --font-size-sm: clamp(1.4rem, calc(1.4rem + 0.2vw), 1.6rem);
+  --font-size-base: clamp(1.6rem, calc(1.6rem + 0.2vw), 1.8rem);
+  --font-size-lg: clamp(1.8rem, calc(1.8rem + 0.25vw), 2rem);
+  --font-size-xl: clamp(2rem, calc(2rem + 0.3vw), 2.4rem);
+  --font-size-2xl: clamp(2.4rem, calc(2.4rem + 0.4vw), 3rem);
+  --font-size-3xl: clamp(3rem, calc(3rem + 0.5vw), 3.6rem);
+  --font-size-4xl: clamp(3.6rem, calc(3.6rem + 0.6vw), 4.8rem);
+  --font-size-5xl: clamp(4.8rem, calc(4.8rem + 0.8vw), 6rem);
+  --font-size-6xl: clamp(6rem, calc(6rem + 1vw), 7.2rem);
+  --font-size-7xl: clamp(7.2rem, calc(7.2rem + 1.2vw), 9rem);
+  --font-size-8xl: clamp(9rem, calc(9rem + 1.6vw), 12rem);
+  --font-size-9xl: clamp(12rem, calc(12rem + 2vw), 16rem);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-rows: 9rem 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+header {
+  grid-area: header;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+main {
+  grid-area: main;
+}
+
+#top,
+#about {
+  border-bottom: 1px solid #ccc;
+}
+#top,
+#about,
+#projects {
+  padding-inline: clamp(1rem, 5vw, 4rem);
+  width: 100%;
+  min-height: 90vh;
+  padding-bottom: 2rem;
+  scroll-margin-top: 9rem;
+}
+footer {
+  grid-area: footer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-weight: 500;
+  font-size: inherit;
+}
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: var(--color-dark-bg);
+    color: var(--color-dark-text);
+  }
+} */
+
+.nocopy {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.position-context {
+  position: sticky;
+  overflow-y: auto;
+  align-self: flex-start;
+  top: 10rem;
+}
+.layout-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+@media (min-width: 768px) {
+  .layout-columns {
+    grid-template-columns: 2fr 1fr;
+  }
+}

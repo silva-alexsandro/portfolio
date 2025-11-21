@@ -1,110 +1,740 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- font google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-   rel="stylesheet"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- icons  -->
-  <link
-   rel="stylesheet"
-   type="text/css"
-   href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-  />
-  <link
-   rel="stylesheet"
-   type="text/css"
-   href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-  />
-  <link rel="stylesheet" href="./src/css/main.css" />
-  <link
-   rel="shortcut icon"
-   href="./src/assets/favicon/favicon.ico"
-   type="image/x-icon"
-  />
-  <title>Alexsandro Silva</title>
- </head>
- <body>
-  <header>
-   <nav class="navbar">
-    <div class="navbar__logo">
-     <img
-      src="./src/assets/favicon/apple-touch-icon.png"
-      alt="Logo"
-      class="navbar__logo-img"
-     />
-    </div>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Dev Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-   <ul class="navbar__menu">
-     <li class="navbar__item">
-      <a href="./index.html" class="navbar__link">Início</a>
-     </li>
-     <li class="navbar__item">
-      <a href="./about.html" class="navbar__link">Sobre</a>
-     </li>
-      <li class="navbar__item">
-      <a href="./resume.html" class="navbar__link">Curriculo</a>
-     </li>
-     <li class="navbar__item">
-      <a href="./projects.html" class="navbar__link">Projeto</a>
-     </li>
-    </ul>
-   </nav>
-  </header>
-  <main id="frame" class="wrapper">
-   <div id="content">
-    <section class="info">
-     <i class="ph ph-clock"></i>
-     <p id="js-clock" class="clock">00:00:00</p>
-    </section>
-    <section class="section grid">
-     <article class="intro">
-      <h1 class="intro__title">Olá, eu sou Alexsandro da Silva</h1>
-      <span class="intro__subtitle">
-       Analista e desenvolvedor de sistemas, Rio de Janeiro, Brasil.
-      </span>
-      <p class="intro__description">
-       Sou técnico em informática, formado desde 2012, com ampla experiência na
-       área de tecnologia. Ao longo desses anos, desenvolvi diversas habilidades
-       e, em especial, um olhar atento para os detalhes. Gosto de criar soluções
-       práticas e eficientes.
-       <br />Estou em constante busca por aperfeiçoamento e novos desafios que
-       me permitam aprimorar minhas habilidades. <br />Sou dedicado, analítico e
-       motivado por desafios.
-      </p>
-
-      <nav class="intro__actions">
-       <a href="./projects.html" class="btn">Ver Projetos</a>
-       <a href="./about.html" class="btn btn--primary">Saber mais</a>
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <!-- Css -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Alexsandro Silva</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <a href="/" class="navbar__brand">
+          <img
+            src="./src/assets/favicon/apple-touch-icon.png"
+            alt="Logo"
+            class="brand__img"
+          />
+        </a>
+        <input type="checkbox" id="menu-toggle" class="navbar__menu-toggle" />
+        <label for="menu-toggle" class="hamburger nocopy">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#top" class="navbar__link navbar__link--active">Inicio</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link"> Sobre</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#projects" class="navbar__link">Projeto</a>
+          </li>
+        </ul>
       </nav>
-     </article>
+    </header>
 
-     <article class="postits">
-      <div class="postit-card">
-       <h3 class="postit-card__title">
-        Responsável, Comprometido, Inteligente.
-       </h3>
+    <main>
+      <section
+        id="top"
+        class="hero layout-columns"
+        aria-label="Apresentação profissional"
+      >
+        <article class="intro">
+          <h1 class="intro__title">Olá, eu sou Alexsandro da Silva</h1>
+          <h3 class="intro__subtitle">
+            Analista e desenvolvedor de sistemas, Rio de Janeiro, Brasil.
+          </h3>
+          <p class="intro__description">
+            Sou técnico em informática, formado desde 2012, com ampla
+            experiência na área de tecnologia. Ao longo desses anos, desenvolvi
+            diversas habilidades e, em especial, um olhar atento para os
+            detalhes.
+          </p>
+          <p class="intro__description">
+            Estou em constante busca por aperfeiçoamento e novos desafios que me
+            permitam aprimorar minhas habilidades, gosto de criar soluções
+            práticas e eficientes. <br />Sou dedicado, analítico e motivado por
+            desafios.
+          </p>
+          <nav class="intro__actions">
+            <a href="#projects" class="btn">Ver Projetos</a>
+            <a href="#about" class="btn btn--primary">Saber mais</a>
+          </nav>
+        </article>
+        <section class="postits" aria-label="Minhas qualificações">
+          <h2 class="subtitle">Minhas Qualificações e Interesses</h2>
+          <ul class="postit-list">
+            <li class="postit-card postit-form nocopy">
+              <h2 class="postit-card__title">
+                Responsável, Comprometido, Inteligente.
+              </h2>
+            </li>
+            <li class="postit-card postit-form nocopy">
+              <h2 class="postit-card__title">Desenvolvedor Frontend</h2>
+            </li>
+            <li class="postit-card postit-form nocopy">
+              <h2 class="postit-card__title">Analista de Dados</h2>
+            </li>
+            <li class="postit-card postit-form nocopy">
+              <h2 class="postit-card__title">
+                Interessado por cultura popular
+              </h2>
+            </li>
+            <li class="postit-card postit-form nocopy">
+              <h2 class="postit-card__title">Futuro Mestre em Computação</h2>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="about" class="about-area">
+        <aside
+          class="sidebar-about"
+          role="tablist"
+          aria-label="Seções Sobre Mim"
+        >
+          <button
+            class="btn active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="about-content"
+            id="tab-about"
+          >
+            Sobre mim
+          </button>
+          <button
+            class="btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="skills-content"
+            id="tab-skills"
+          >
+            Habilidades
+          </button>
+          <button
+            class="btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="resume-content"
+            id="tab-resume"
+          >
+            Curriculo
+          </button>
+        </aside>
+        <div class="contents">
+          <header class="title-section-active">
+            <h1>Sobre Mim</h1>
+          </header>
+
+          <section
+            id="about-content"
+            class="section layout-columns show"
+            role="tabpanel"
+            aria-labelledby="tab-about"
+          >
+            <article class="intro">
+              <p class="intro__description">
+                Carioca, morador da zona oeste do Rio, com forte afinidade por
+                tecnologia e computação. A vontade de aprender me levou à
+                formação técnica em Informática e à graduação em Análise e
+                Desenvolvimento de Sistemas.
+              </p>
+
+              <p class="intro__description">
+                Além da área de TI, gosto de música, sendo meu estilo preferido
+                o rock and roll. Tenho também grande interesse pelas ciências
+                humanas e pela cultura popular brasileira, apreciando suas
+                diversas manifestações.
+              </p>
+
+              <p class="intro__description">
+                Ao longo da minha trajetória, desenvolvi um olhar analítico e
+                atenção aos detalhes, sempre em busca de soluções claras e
+                eficientes que agreguem valor. Gosto de unir lógica e
+                criatividade para resolver problemas, otimizar processos e
+                impulsionar resultados.
+              </p>
+
+              <nav class="intro__actions">
+                <a href="#projects" class="btn">Ver Projetos</a>
+              </nav>
+            </article>
+            <article class="card card-tree-line position-context">
+              <section class="card__top">
+                <div class="card__avatar">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/149261935?v4"
+                    alt="Foto de perfil de Alexsandro Silva"
+                  />
+                </div>
+                <h2 class="nocopy">Alexsandro da Silva</h2>
+                <span class="status">
+                  <span class="status__icon"></span>
+                  Disponível para trabalho
+                </span>
+              </section>
+              <section class="card__mind">
+                <div class="skeleton skeleton-subtitle"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+              </section>
+              <section class="card__bottom">
+                <a
+                  href="https://github.com/silva-alexsandro"
+                  class="btn"
+                  target="_blank"
+                  title="Acessar o GitHub de Alexsandro"
+                  aria-label="Acessar o GitHub de Alexsandro"
+                >
+                  <i class="ph ph-github-logo" aria-hidden="true"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/dasilva-alexsandro/"
+                  class="btn"
+                  target="_blank"
+                  title="Acessar o LinkedIn de Alexsandro"
+                  aria-label="Acessar o LinkedIn de Alexsandro"
+                >
+                  <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+                </a>
+              </section>
+            </article>
+          </section>
+
+          <section
+            id="skills-content"
+            class="section"
+            role="tabpanel"
+            tabindex="0"
+            aria-labelledby="tab-skills"
+          >
+            <div class="accordion">
+              <!-- Linguagens de Programação -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  Linguagens de Programação
+                </summary>
+                <ul class="accordion__list">
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-c-original"
+                    ></i>
+                    <span>C</span>
+                  </li>
+
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-python-plain"
+                    ></i>
+                    <span>Python</span>
+                  </li>
+
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-java-plain"
+                    ></i>
+                    <span>Java</span>
+                  </li>
+
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-javascript-plain"
+                    ></i>
+                    <span>Javascript</span>
+                  </li>
+
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-typescript-plain"
+                    ></i>
+                    <span>Typescript</span>
+                  </li>
+                </ul>
+              </details>
+
+              <!-- Data Science -->
+              <details class="accordion-item">
+                <summary class="accordion-header">Data Science</summary>
+                <ul class="accordion__list">
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-numpy-plain"
+                    ></i
+                    ><span>Numpy</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-pandas-plain"
+                    ></i
+                    ><span>Pandas</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-anaconda-original"
+                    ></i
+                    ><span>Anaconda</span>
+                  </li>
+                </ul>
+              </details>
+
+              <!-- Front-end -->
+              <details class="accordion-item">
+                <summary class="accordion-header">Front-end</summary>
+                <ul class="accordion__list">
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-css3-plain"
+                    ></i
+                    ><span>CSS 3</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-html5-plain"
+                    ></i
+                    ><span>HTML 5</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-react-original"
+                    ></i
+                    ><span>React</span>
+                  </li>
+                </ul>
+              </details>
+
+              <!-- Banco de Dados -->
+              <details class="accordion-item">
+                <summary class="accordion-header">Banco de Dados</summary>
+                <ul class="accordion__list">
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-azuresqldatabase-plain"
+                    ></i
+                    ><span>SQL</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-mysql-plain-wordmark"
+                    ></i>
+
+                    <span>MySQL</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-postgresql-plain"
+                    ></i>
+
+                    <span>Postgresql</span>
+                  </li>
+                </ul>
+              </details>
+
+              <!-- Ferramentas -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  Ferramentas & Ambientes
+                </summary>
+                <ul class="accordion__list">
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-linux-plain"
+                    ></i
+                    ><span>Linux</span>
+                  </li>
+                  <li tabindex="0" class="postit-form">
+                    <i
+                      aria-hidden="true"
+                      class="tech-icons devicon-windows11-original"
+                    ></i
+                    ><span>Windows</span>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </section>
+
+          <section
+            id="resume-content"
+            class="section"
+            role="tabpanel"
+            aria-labelledby="tab-resume"
+          >
+            <div id="cv-container">
+              <section id="info_personal">
+                <h2 class="nocopy">Alexsandro da Silva</h2>
+
+                <p class="nocopy">
+                  Brasileiro, solteiro, 30 anos | Rio de Janeiro/RJ
+                </p>
+                <address>
+                  <a
+                    href="https://wa.me/5521968407129"
+                    target="_blank"
+                    title="Whatsapp"
+                    rel="noopener"
+                  >
+                    <i class="ph ph-whatsapp-logo"></i>
+                    <span> (21) 9 6840-7129 </span> |
+                  </a>
+                  <a
+                    href="mailto:acg.alexsandro@hotmail.com"
+                    title="enviar E-mail"
+                  >
+                    <i class="ph ph-envelope-simple"></i>
+                    acg.alexsandro@hotmail.com
+                  </a>
+                </address>
+              </section>
+              <!-- Objetivo -->
+              <section
+                id="objetivo"
+                aria-labelledby="objetivo-title"
+                class="nocopy"
+              >
+                <h2 id="objetivo-title">Objetivo:</h2>
+                <p>Atuar como Desenvolvedor de software.</p>
+              </section>
+              <!-- Síntese -->
+              <section
+                id="sintese"
+                aria-labelledby="sintese-title"
+                class="nocopy"
+              >
+                <h2 id="sintese-title">Resumo Profissional:</h2>
+                <p>
+                  Profissional com mais de 5 anos de atividade no setor de
+                  tecnologia.
+                </p>
+                <p>
+                  Busco novos desafios envolvendo ambientes de integração
+                  contínua, colaboração com times ágeis e o aperfeiçoamento do
+                  meu papel como desenvolvedor.
+                </p>
+              </section>
+              <!-- Formação -->
+              <section
+                id="formacao"
+                aria-labelledby="formacao-title"
+                class="nocopy"
+              >
+                <h2 id="formacao-title">Formação</h2>
+
+                <ul>
+                  <li>
+                    Especialização em Análise de Dados como Apoio à Política
+                    Pública - UFRRJ, cursando.
+                  </li>
+                  <li>
+                    Graduação em Análise e Desenvolvimento de Sistemas -
+                    FAETERJ-Rio, 2023.
+                  </li>
+                  <li>
+                    Técnico em Eletrônica - Escola E. Técnica Visconde de Mauá,
+                    2018.
+                  </li>
+                  <li>
+                    Ensino Médio e Técnico em Informática e Suporte - Instituto
+                    Analice, 2012.
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Cursos -->
+              <section
+                id="cursos"
+                aria-labelledby="cursos-title"
+                class="nocopy"
+              >
+                <h2 id="cursos-title">Cursos Extracurriculares</h2>
+
+                <ul>
+                  <li>Modelagem de Dados UML - Udemy (2023)</li>
+                  <li>
+                    Full Stack com Spring Boot e React JS - DevSuperior (2023)
+                  </li>
+                  <li>
+                    Git e GitHub (Repositório, Commit e Versões) - Alura (2022)
+                  </li>
+                  <li>Formação React com TypeScript - Alura (2022)</li>
+                  <li>
+                    HTTP (Entendendo a Web por Baixo dos Panos) - Alura (2022)
+                  </li>
+                  <li>Banco de Dados SQL e NoSQL - Geek University (2022)</li>
+                  <li>Formação Front-End - Alura (2022)</li>
+                  <li>Formação HTML e CSS - Alura (2022)</li>
+                  <li>Formação JavaScript para Back-End - Alura (2022)</li>
+                  <li>SEO (Otimização de Sites) - Alura (2022)</li>
+                  <li>Git do Básico ao Avançado - Udemy (2021)</li>
+                  <li>Java Foundations - Oracle Academy (2021)</li>
+                  <li>PHP 7 (Desenvolvedor Web + Projetos) - Cod3r (2021)</li>
+                  <li>Java Programação OO - Udemy (2021)</li>
+                </ul>
+              </section>
+
+              <!-- Sistemas -->
+              <section
+                id="sistemas"
+                aria-labelledby="sistemas-title"
+                class="nocopy"
+              >
+                <h2 id="sistemas-title">Sistemas / Softwares</h2>
+                <p>Microsoft Office, BPMN (Bizagi), Google Workspace.</p>
+              </section>
+
+              <!-- Idiomas -->
+              <section
+                id="idiomas"
+                aria-labelledby="idiomas-title"
+                class="nocopy"
+              >
+                <h2 id="idiomas-title">Idiomas</h2>
+
+                <ul>
+                  <li>Inglês - A2</li>
+                  <li>Espanhol - B1</li>
+                </ul>
+              </section>
+
+              <section
+                id="experiencia"
+                aria-labelledby="experiencia-title"
+                class="nocopy"
+              >
+                <h2 id="experiencia-title">Experiência Profissional</h2>
+
+                <!-- Empresa 1 -->
+                <article aria-labelledby="gps-title">
+                  <h3 id="gps-title">
+                    Grupo GPS - Analista de Planejamento - 02/2024
+                  </h3>
+                  <ul>
+                    <li><strong>Atividades:</strong></li>
+                    <li>Participação em reuniões SCRUM.</li>
+                  </ul>
+                </article>
+                <article aria-labelledby="brasas-title">
+                  <h3 id="brasas-title">
+                    BRASAS English Course - Analista de Sistemas 1 - 11/2023 a
+                    12/2023
+                  </h3>
+                  <ul>
+                    <li><strong>Atividades:</strong></li>
+                    <li>Participação em reuniões SCRUM.</li>
+                    <li>Atendimento de suporte N1 e N2 via TeamViewer.</li>
+                    <li>Gerenciamento da infraestrutura de redes.</li>
+                    <li>Suporte ao sistema Sophia.</li>
+                  </ul>
+                </article>
+                <article aria-labelledby="mjv-title">
+                  <h3 id="mjv-title">
+                    MJV Technology & Innovation - Analista Desenvolvimento
+                    Front-End - 04/2022 a 01/2023
+                  </h3>
+                  <ul>
+                    <li><strong>Atividades:</strong></li>
+                    <li>Criação de landing pages (HTML, CSS/SASS, ReactJS).</li>
+                    <li>Participação em reuniões SCRUM.</li>
+                    <li>Manutenção da intranet.</li>
+                    <li>Versionamento com GitHub.</li>
+                    <li>Criação de web parts customizadas no SharePoint.</li>
+                    <li>Apoio em programas internos e certificação GPTW.</li>
+                  </ul>
+                </article>
+                <article aria-labelledby="oi-title">
+                  <h3 id="oi-title">
+                    Oi S.A - Técnico de Telecomunicações I - 07/2020 a 03/2022
+                  </h3>
+                  <ul>
+                    <li><strong>Atividades:</strong></li>
+                    <li>
+                      Atuação na área de Desenho e Solução de Dados, realizando
+                      montagem de rotas nos sistemas STC/OSM.
+                    </li>
+                  </ul>
+                </article>
+                <article aria-labelledby="globo-tecnico-title">
+                  <h3 id="globo-tecnico-title">
+                    Rede Globo - Técnico de Recepção de Sinais I - 04/2019 a
+                    06/2020
+                  </h3>
+                  <ul>
+                    <li><strong>Atividades:</strong></li>
+                    <li>
+                      Recepção e análise de sinais RF, conferência da qualidade
+                      técnica de áudio e vídeo e ajustes conforme padrões de
+                      transmissão.
+                    </li>
+                  </ul>
+                  <h3
+                    id="globo-estagio-title"
+                    aria-labelledby="globo-estagio-title"
+                    style="padding-left: 2rem"
+                  >
+                    Estagiário Técnico de Recepção de Sinais - 04/2018 a 04/2019
+                  </h3>
+
+                  <ul style="padding-left: 2.2rem">
+                    <li><strong>Atividades:</strong></li>
+                    <li>
+                      Apoio na recepção e análise de sinais RF conforme
+                      requisitos técnicos.
+                    </li>
+                  </ul>
+                  <h3
+                    id="globo-estagio-title"
+                    aria-labelledby="globo-estagio-title"
+                    style="padding-left: 2rem"
+                  >
+                    Rede Globo — Aprendiz de Administração - 11/2016 a 04/2018
+                  </h3>
+
+                  <ul style="padding-left: 2.2rem">
+                    <li><strong>Atividades:</strong></li>
+                    <li>
+                      Apoio à gestão de inventário de equipamentos de filmagem e
+                      realização de requisições via SAP.
+                    </li>
+                  </ul>
+                </article>
+              </section>
+            </div>
+            <div class="cv-actions">
+              <a
+                href="./src/assets/pdf/cv-alexsandro-silva.pdf"
+                download="cv-alexsandro-silva.pdf"
+                class="btn"
+              >
+                <i class="ph ph-download-simple"></i>
+              </a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h3 id="title-page-projects">Projetos</h3>
+        <div class="projects-grid">
+          <a
+            href="https://palavrasoltas.netlify.app/"
+            target="_blank"
+            class="project-card"
+          >
+            <img
+              src="./src/assets/img/palavrasoltas.png"
+              alt="Palavras Soltas"
+            />
+            <div class="overlay">
+              <h3>Palavras Soltas</h3>
+              <p>Um espaço para colocar tudo para fora...</p>
+            </div>
+          </a>
+
+          <a
+            href="https://tudonasacola.netlify.app"
+            target="_blank"
+            class="project-card"
+          >
+            <img src="./src/assets/img/tudonasacola.png" alt="Tudo na Sacola" />
+            <div class="overlay">
+              <h3>Tudo na Sacola</h3>
+              <p>Gerencie suas listas de compras com facilidade.</p>
+            </div>
+          </a>
+        </div>
+
+        <section class="sections-repos">
+          <div class="repos-header">
+            <h2>Meus Repositórios</h2>
+
+            <div class="view-toggle">
+              <button id="view-cards" class="active">Cards</button>
+              <button id="view-table">Tabela</button>
+            </div>
+          </div>
+
+          <!-- Skeleton enquanto carrega -->
+          <ul id="repos" class="repos-cards loading">
+            <!-- Skeletons -->
+            <li class="repo-skeleton"></li>
+            <li class="repo-skeleton"></li>
+            <li class="repo-skeleton"></li>
+          </ul>
+
+          <!-- Tabela (escondida inicialmente) -->
+          <table id="repos-table" class="hidden">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Linguagem</th>
+                <th>GitHub</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo">
+        <img src="./src/assets/favicon/apple-touch-icon.png" alt="Logo" />
       </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Desenvolvedor Frontend</h3>
-      </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Analista de Dados</h3>
-      </div>
-      <div class="postit-card">
-       <h3 class="postit-card__title">Futuro Mestre em Computação</h3>
-      </div>
-     </article>
-    </section>
-   </div>
-  </main>
+      <p>&copy; 2025 Alexsandro Silva</p>
+    </footer>
+  </body>
   <script defer type="module" src="./src/js/main.js"></script>
-  <script defer type="module" src="./src/js/clock.js"></script>
- </body>
 </html>

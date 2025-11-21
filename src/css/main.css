@@ -1,14 +1,17 @@
-/* main.scss */
-@import './base/reset.css';
+@import "./base/reset.css";
+@import "./base/global.css";
 
-@import 'components/curriculo.css';
-@import 'components/buttons.css';
-@import 'components/infinitecarousel.css';
+@import "./components/buttons.css";
+@import "./components/postits.css";
+@import "./components/accordion.css";
+@import "./components/status.css";
+@import "./components/card.css";
+@import "./components/skeleton.css";
 
-@import './layout/header.css';
-@import './layout/container.css';
-@import './layout/mod.css';
+@import "./layout/header.css";
+@import "./layout/footer.css";
+@import "./layout/curriculo.css";
 
-@import './templates/home.css';
-@import './templates/about.css';
-@import './templates/projects.css';
+@import "./templates/hero.css";
+@import "./templates/project.css";
+@import "./templates/about.css";

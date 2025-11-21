@@ -1,0 +1,13 @@
+footer {
+  background: var(--color-white);
+  border-top: 2px solid rgba(4, 4, 4, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: min(2rem, 4rem);
+}
+.logo {
+  width: min(3rem, 5rem);
+  height: min(3rem, 5rem);
+  overflow: hidden;
+}
