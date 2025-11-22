@@ -15,10 +15,10 @@ export function loadRepos() {
         )
         .forEach((repo) => {
           const card = `
-          <li class="repo-card">
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "Sem descrição"}</p>
-            <span class="lang">${repo.language || "?"}</span>
+          <li class="repo-card card">
+            <h3 class='nocopy'>${repo.name}</h3>
+            <p class='nocopy'>${repo.description || "Sem descrição"}</p>
+            <span class="lang nocopy">${repo.language || ""}</span>
             <a href="${repo.html_url}" target="_blank">
               <i class="ph ph-github-logo"></i>
             </a>
@@ -30,7 +30,7 @@ export function loadRepos() {
           <tr>
             <td>${repo.name}</td>
             <td>${repo.description || "Sem descrição"}</td>
-            <td>${repo.language || "?"}</td>
+            <td>${repo.language || ""}</td>
             <td><a href="${repo.html_url}" target="_blank">GitHub</a></td>
           </tr>
         `;
@@ -42,20 +42,38 @@ export function loadRepos() {
   );
 }
 
+// export function setupViewToggle() {
+//   $("#view-cards").on("click", function () {
+//     $(this).addClass("active");
+//     $("#view-table").removeClass("active");
+
+//     $("#repos").show();
+//     $("#repos-table").addClass("hidden");
+//   });
+
+//   $("#view-table").on("click", function () {
+//     $(this).addClass("active");
+//     $("#view-cards").removeClass("active");
+
+//     $("#repos").hide();
+//     $("#repos-table").removeClass("hidden");
+//   });
+// }
 export function setupViewToggle() {
-  $("#view-cards").on("click", function () {
+  const toggleButtons = $("#view-cards, #view-table");
+  const cardsView = $("#repos");
+  const tableView = $("#repos-table");
+
+  toggleButtons.on("click", function () {
+    toggleButtons.removeClass("active");
     $(this).addClass("active");
-    $("#view-table").removeClass("active");
 
-    $("#repos").show();
-    $("#repos-table").addClass("hidden");
-  });
-
-  $("#view-table").on("click", function () {
-    $(this).addClass("active");
-    $("#view-cards").removeClass("active");
-
-    $("#repos").hide();
-    $("#repos-table").removeClass("hidden");
+    if (this.id === "view-cards") {
+      cardsView.show();
+      tableView.addClass("hidden");
+    } else {
+      cardsView.hide();
+      tableView.removeClass("hidden");
+    }
   });
 }

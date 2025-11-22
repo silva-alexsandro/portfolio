@@ -401,6 +401,10 @@
                     ></i
                     ><span>Windows</span>
                   </li>
+                  <li tabindex="0" class="postit-form"><span>Bizagi</span></li>
+                  <li tabindex="0" class="postit-form">
+                    <span>IBM Maximo</span>
+                  </li>
                 </ul>
               </details>
             </div>
@@ -696,8 +700,12 @@
             <h2>Meus Repositórios</h2>
 
             <div class="view-toggle">
-              <button id="view-cards" class="active">Cards</button>
-              <button id="view-table">Tabela</button>
+              <button id="view-cards" class="btn active">
+                <i class="ph ph-cards"></i>
+              </button>
+              <button id="view-table" class="btn">
+                <i class="ph ph-table"></i>
+              </button>
             </div>
           </div>
 
@@ -710,17 +718,19 @@
           </ul>
 
           <!-- Tabela (escondida inicialmente) -->
-          <table id="repos-table" class="hidden">
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Linguagem</th>
-                <th>GitHub</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+          <div class="table-scroll-wrapper">
+            <table id="repos-table" class="hidden">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Linguagem</th>
+                  <th>GitHub</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </section>
       </section>
     </main>

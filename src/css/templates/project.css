@@ -48,44 +48,22 @@ section#projects h3#title-page-projects {
 .project-card:hover .overlay {
   opacity: 1;
 }
-/*
-.sections-repos {
-  margin-top: 4rem;
-  border: 1px dashed black;
-}
-.sections-repos h2 {
-  font-size: var(--font-size-lg);
-  font-weight: 500;
-}
-
-.sections-repos ul#repos {
-  border: 1px solid;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  align-items: start;
-}
-.sections-repos ul#repos li {
-  border: 1px solid;
-  padding: 2rem;
-} */
-
 .repos-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
-.view-toggle button {
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #000;
-  cursor: pointer;
-  background: white;
+.view-toggle button i {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .view-toggle button.active {
-  background: #000;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* GRID DE CARDS */
@@ -96,33 +74,29 @@ section#projects h3#title-page-projects {
   padding: 1rem;
 }
 
-/* CARD */
-.repo-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+#repos .repo-card.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 1rem;
 }
-
-.repo-card h3 {
-  margin: 0;
-  font-size: 1.2rem;
+#repos .repo-card.card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
 }
-
-.repo-card .lang {
-  display: inline-block;
-  padding: 0.3rem 0.6rem;
-  background: #eee;
-  border-radius: 4px;
-  font-size: 0.8rem;
+#repos .repo-card.card p {
+  font-size: var(--font-size-xs);
 }
-
-.repo-card a {
-  margin-left: auto;
-  font-size: 1.5rem;
+#repos .repo-card.card .lang {
+  font-size: var(--font-size-xs);
+  color: var(--color-);
+}
+#repos .repo-card.card a {
+  font-size: 1.6rem;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+#repos .repo-card.card a:hover {
+  color: var(--color-primary);
 }
 
 /* TABLE VIEW */
@@ -156,5 +130,18 @@ section#projects h3#title-page-projects {
   }
   100% {
     background-position: -100% 0;
+  }
+}
+.table-scroll-wrapper {
+  max-width: 280px;
+
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 400px) {
+  .table-scroll-wrapper {
+    max-width: 100%;
   }
 }
